@@ -1,6 +1,10 @@
 # Mini-LISP
 Compiler final project.
 
+## How to Run?
+```Bash
+    $ ./smli < example.lsp
+
 ## Type Definition
     Boolean: Boolean type includes two values, #t for true and #f for false.
     Number: Signed integer from −(231) to 231 – 1, behavior out of this range is not defined.
@@ -106,6 +110,7 @@ define , if
         variable    : VARIABLE
                     ;
     /**********************************************************************************/
+    目前只能符合文法，未能有實際作用。
     fun-exp     : '(' LAMBDA fun-ids fun-body ')' 
                 ;
         fun-ids     : '(' var_recursive ')' 
