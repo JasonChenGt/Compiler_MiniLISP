@@ -134,7 +134,8 @@ define , if
                     ;
         else-exp    : exp 
                     ;
-## Node Structure
+## Node
+### Structure
 | type | name | 基本的node | define node | if node | function node |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | int        | node_type   | node的型態 | | |
@@ -145,8 +146,14 @@ define , if
 | struct node *   | condition   | | | condition |
 | struct node *   | left   | 左子樹 | define_name | if_statement  | arguments
 | struct node *   | right   | 右子樹 | define_function | else_statement| function_body
+### Type_Symbol
+|+|-|*|/|M|>|<|=|&|\||
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |:-: | :-: |
+| sum | Minus | Multiply | Divide | Modulus | Greater | Smaller | Equal | And | Or | 
+|!|C|N|B|V|R|D|F|I|
+| Not | Function Call | Number | BoolValue | Variable | Recursive | Define | Function | If |
 ## Function
-    struct node *new_NUMBER_node (int value) ; // 生成空的新node
+    struct node *new_NUMBER_node (int value) ; 
     struct node *new_BOOL_node (char *value) ;
     struct node *new_VARIABLE_node (char *name , int value) ;
     struct node *new_node (int node_type , struct node *left , struct node *right) ;
