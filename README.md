@@ -7,7 +7,7 @@ Compiler final project.
 
 # Operation Overview
 ## Numerical 
-| OperatorsName | Symbol | Example |
+>| OperatorsName | Symbol | Example |
 | :--------: | :-: | :------------: |
 | Plus       | +   | (+ 1 2) => 3   |
 | Minus      | -   | (- 1 2) => -1  |
