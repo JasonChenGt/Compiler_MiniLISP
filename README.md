@@ -17,7 +17,7 @@ Compiler final project.
 | Greater    | >   | (> 1 2) => #f  |
 | Smaller    | <   | (< 1 2) => #t  | 
 | Equal      | =   | (= 1 2) => #f  |
-##Logical Operators
+## Logical Operators
 | Name | Symbol | Example
 | :-: | :-: | :---------------: |
 | And | and | (and #t #f) => #f |
