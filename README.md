@@ -5,10 +5,6 @@
     Linux
 ## How to Run?
     $ ./smli < example.lsp
-    or
-    $ sh BuildSmliBasic.sh // for creat only Basic Answer in output.txt
-    or
-    $ sh BuildSmliBonus.sh // for creat Basic and Bonus Answer in output.txt
 ## Type Definition
     Boolean : Boolean type includes two values, #t for true and #f for false.
     Number  : Signed integer from −(231) to 231 – 1, behavior out of this range is not defined.
@@ -106,28 +102,28 @@
                 ;
         variable    : VARIABLE
                     ;
-    /**********************************************************************************/
-    目前只能符合文法，未能有實際作用。
-    fun-exp     : '(' LAMBDA fun-ids fun-body ')' 
-                ;
-        fun-ids     : '(' var_recursive ')' 
-                    ;
-        var_recursive   : variable var_recursive 
-                        | variable 
-                        |
-                        ;
-        fun-body    : exp 
-                    ;
-        fun-call    : '(' fun-exp param ')'  
-                    | '(' fun-exp ')' 
-                    | '(' fun-name param ')' 
-                    | '(' fun-name ')' 
-                    ;
-        param       : exp-recursive 
-                    ;
-        fun-name    : VARIABLE 
-                    ;
-    /**********************************************************************************/
+    /***********************************************/
+            目前只能符合文法，未能有實際作用。  
+    /fun-exp     : '(' LAMBDA fun-ids fun-body ')'  /
+    /            ;                                  /
+    /    fun-ids     : '(' var_recursive ')'        /
+    /                ;                              /
+    /    var_recursive   : variable var_recursive   /
+    /                    | variable                 /
+    /                    |                          /
+    /                    ;                          /
+    /    fun-body    : exp                          /
+    /                ;                              /
+    /    fun-call    : '(' fun-exp param ')'        /
+    /                | '(' fun-exp ')'              /
+    /                | '(' fun-name param ')'       /
+    /                | '(' fun-name ')'             /
+    /                ;                              /
+    /    param       : exp-recursive                /
+    /                ;                              /
+    /    fun-name    : VARIABLE                     /
+    /                ;                              /
+    /***********************************************/
     if-exp      : '(' IF test-exp then-exp else-exp ')' 
                 ;
         test-exp    : exp  
