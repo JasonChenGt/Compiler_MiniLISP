@@ -1,1 +1,2 @@
-# Compiler_final
+# Mini-LISP
+Compiler final project.
