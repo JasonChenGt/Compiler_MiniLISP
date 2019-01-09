@@ -153,11 +153,25 @@ define , if
 |!|C|N|B|V|R|D|F|I|
 | Not | Function Call | Number | BoolValue | Variable | Recursive | Define | Function | If |
 ## Function
-    struct node *new_NUMBER_node (int value) ; 
-    struct node *new_BOOL_node (char *value) ;
-    struct node *new_VARIABLE_node (char *name , int value) ;
-    struct node *new_node (int node_type , struct node *left , struct node *right) ;
-    struct node *new_logic_node (int node_type , struct node *left , struct node *right) ;
-    struct node *new_define_node (struct node *name , struct node *function) ;
-    struct node *new_function_node (struct node *arguments , struct node *function_body) ;
-    struct node *new_if_node (struct node *condition , struct node *if_statement , struct node *else_statement) ;
+    創一個新的普通node：
+        struct node *new_node (int node_type , struct node *left , struct node *right) ;
+    創一個 BoolValue 的node：
+        struct node *new_BOOL_node (char *value) ;
+    創一個 Variable 的node：
+        struct node *new_VARIABLE_node (char *name , int value) ;
+    創一個 Number 的node：
+        struct node *new_NUMBER_node (int value) ; 
+    創一個 And , Or , Not 的node：
+        struct node *new_logic_node (int node_type , struct node *left , struct node *right) ;
+    創一個 Define 的node：
+        struct node *new_define_node (struct node *name , struct node *function) ;
+    創一個 Function 的node：
+        struct node *new_function_node (struct node *arguments , struct node *function_body) ;
+    創一個 If 的node：
+        struct node *new_if_node (struct node *condition , struct node *if_statement , struct node *else_statement) ;
+    檢查是否已經到最下面，並做type checking，且若是使用define過的東西就做替換：
+        bool checkButtom (struct node *tree , int node_type , int checkError) ;
+    將要印的node印出來
+        void print_tree (struct node *tree) ;
+    將整個AST執行過一遍：
+        void search_tree (struct node *tree) ;
