@@ -31,7 +31,7 @@ Compiler final project.
 | Or  | or  | (or #t #f) => #t  |
 | Not | not | (not #t) => #f    |
 ### Other Operators
-define , if
+    define , if
 ## Lexical Details
     Preliminary Definitions:
         letter          [a-z]
