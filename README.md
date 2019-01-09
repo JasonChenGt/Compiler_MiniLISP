@@ -1,5 +1,6 @@
 # Mini-LISP
-Compiler final project.
+    Compiler final project.
+    使用 Lex 和 Yacc 編寫，概念為讀取輸入的指令，建立AST後，search整棵樹，依照每個node的type去執行不同的動作。
 ## Environment 
     Linux
 ## How to Run?
@@ -174,5 +175,5 @@ Compiler final project.
         bool checkButtom (struct node *tree , int node_type , int checkError) ;
     將要印的node印出來
         void print_tree (struct node *tree) ;
-    將整個AST執行過一遍：
+    將整個AST search過一遍：
         void search_tree (struct node *tree) ;
