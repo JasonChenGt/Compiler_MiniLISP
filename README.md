@@ -2,13 +2,11 @@
 Compiler final project.
 
 ## How to Run?
-```Bash
     $ ./smli < example.lsp
     or
     $ sh BuildSmliBasic.sh // for creat only Basic Answer in output.txt
     or
     $ sh BuildSmliBonus.sh // for creat Basic and Bonus Answer in output.txt
-```
 ## Type Definition
     Boolean: Boolean type includes two values, #t for true and #f for false.
     Number: Signed integer from −(231) to 231 – 1, behavior out of this range is not defined.
@@ -44,20 +42,16 @@ define , if
         bool-val  ::= #t | #f
 ## Grammar Overview
     startline   : program       
-
     program     : stmt program
                 | stmt
                 ;
-
     stmt        : exp           
                 | def-stmt     
                 | print-stmt    
                 ;
-
     print-stmt  : '(' PRINT_BOOL exp ')' 
                 | '(' PRINT_NUM  exp ')' 
                 ;
-
     exp         : BOOL_VAL 
                 | NUMBER
                 | VARIABLE 
@@ -67,11 +61,9 @@ define , if
                 | fun-call
                 | if-exp 
                 ;
-
     exp-recursive   : exp exp-recursive 
                     | exp 
                     ;
-
     num-op      : plus-op 
                 | minus-op
                 | multiply-op
@@ -97,7 +89,6 @@ define , if
                     ;
         equal-op    : '(' '=' exp exp-recursive ')' 
                     ;
-
     logical-op  : and-op 
                 | or-op 
                 | not-op 
@@ -108,7 +99,6 @@ define , if
                     ;
         not-op      : '(' NOT exp ')' 
                     ;
-
     def-stmt    : '(' DEFINE variable exp ')'
                 ;
         variable    : VARIABLE
@@ -135,7 +125,6 @@ define , if
         fun-name    : VARIABLE 
                     ;
     /**********************************************************************************/
-
     if-exp      : '(' IF test-exp then-exp else-exp ')' 
                 ;
         test-exp    : exp  
