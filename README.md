@@ -34,13 +34,14 @@ Compiler final project.
 define , if
 ## Lexical Details
     Preliminary Definitions:
-        separator ::= ‘\t’(tab) | ‘\n’ | ‘\r’ | ‘ ’(space) 
-        letter    ::= [a-z]
-        digit     ::= [0-9]
+        letter          [a-z]
+        digit           [0-9]
+        separator       "\t"|"\n"|"\r"|" "
+
     Token Definitions:
-        number    ::= 0 | [1-9]digit* | -[1-9]digit* 
-        ID        ::= letter (letter | digit | ‘-’)* 
-        bool-val  ::= #t | #f
+        number          0|[1-9]{digit}*|\-[1-9]{digit}*
+        variable        {letter}({letter}|{digit}|"-")*
+        bool_val        #t|#f
 ## Grammar Overview
     startline   : program       
     program     : stmt program
