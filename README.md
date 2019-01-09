@@ -8,8 +8,8 @@ Compiler final project.
     or
     $ sh BuildSmliBonus.sh // for creat Basic and Bonus Answer in output.txt
 ## Type Definition
-    Boolean: Boolean type includes two values, #t for true and #f for false.
-    Number: Signed integer from −(231) to 231 – 1, behavior out of this range is not defined.
+    Boolean : Boolean type includes two values, #t for true and #f for false.
+    Number  : Signed integer from −(231) to 231 – 1, behavior out of this range is not defined.
 
 ## Operation Overview
 ### Numerical 
