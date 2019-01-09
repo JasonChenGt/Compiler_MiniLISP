@@ -3,7 +3,11 @@ Compiler final project.
 
 ## How to Run?
 ```Bash
-$ ./smli < example.lsp
+    $ ./smli < example.lsp
+    or
+    $ sh BuildSmliBasic.sh // for creat only Basic Answer in output.txt
+    or
+    $ sh BuildSmliBonus.sh // for creat Basic and Bonus Answer in output.txt
 ```
 ## Type Definition
     Boolean: Boolean type includes two values, #t for true and #f for false.
