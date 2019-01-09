@@ -23,3 +23,14 @@ Compiler final project.
 | And | and | (and #t #f) => #f |
 | Or  | or  | (or #t #f) => #t  |
 | Not | not | (not #t) => #f    |
+## Other Operators
+define , if
+# Lexical Details
+    Preliminary Definitions:
+        separator ::= ‘\t’(tab) | ‘\n’ | ‘\r’ | ‘ ’(space) 
+        letter ::= [a-z]
+        digit ::= [0-9]
+    Token Definitions:
+        number ::= 0 | [1-9]digit* | -[1-9]digit* 
+        ID ::= letter (letter | digit | ‘-’)* 
+        bool-val ::= #t | #f
