@@ -1,6 +1,7 @@
 # Mini-LISP
 Compiler final project.
-
+## Environment 
+    Linux
 ## How to Run?
     $ ./smli < example.lsp
     or
