@@ -7,7 +7,7 @@ Compiler final project.
 
 # Operation Overview
 ## Numerical 
->| OperatorsName | Symbol | Example |
+| OperatorsName | Symbol | Example |
 | :--------: | :-: | :------------: |
 | Plus       | +   | (+ 1 2) => 3   |
 | Minus      | -   | (- 1 2) => -1  |
@@ -17,3 +17,9 @@ Compiler final project.
 | Greater    | >   | (> 1 2) => #f  |
 | Smaller    | <   | (< 1 2) => #t  | 
 | Equal      | =   | (= 1 2) => #f  |
+##Logical Operators
+| Name | Symbol | Example
+| :-: | :-: | :---------------: |
+| And | and | (and #t #f) => #f |
+| Or  | or  | (or #t #f) => #t  |
+| Not | not | (not #t) => #f    |
