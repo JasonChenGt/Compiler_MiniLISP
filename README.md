@@ -1,5 +1,4 @@
 # Mini-LISP
-    Compiler final project.
     使用 Lex 和 Yacc 編寫，概念為讀取輸入的指令，建立AST後，search整棵樹，依照每個node的type去執行不同的動作。
 ## Environment 
     Linux
